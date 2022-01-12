@@ -2,20 +2,9 @@ class ProductsController < ApplicationController
 
 
 def display_product
-  render json: Product.all
+  product = Product.all
+  render json: Product.as_json 
 end 
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 end
