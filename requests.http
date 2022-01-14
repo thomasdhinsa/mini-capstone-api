@@ -1,0 +1,42 @@
+Get http://localhost:3000/show/1
+Content-Type: application/json
+#works
+
+
+###
+
+POST http://localhost:3000/create
+Content-Type: application/json
+
+{
+  "name": "salad",
+  "price": "7",
+  "description": "Kale,Cucumber,Spinach,Chick Peas"
+}
+
+#works
+
+
+###
+
+GET http://localhost:3000/index
+Content-Type: application/json
+#works
+
+
+###
+
+PATCH http://localhost:3000/update/1
+Content-Type: application/json
+
+ {
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Hamburger_%28black_bg%29.jpg"
+ }
+
+#works
+
+###
+
+DELETE http://localhost:3000/destroy/6
+Content-Type: application/json
+#works
