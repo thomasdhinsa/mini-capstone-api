@@ -1,11 +1,11 @@
-Get http://localhost:3000/show/1
+Get http://localhost:3000/products
 Content-Type: application/json
 #works
 
 
 ###
 
-POST http://localhost:3000/create
+POST http://localhost:3000/products
 Content-Type: application/json
 
 {
@@ -19,14 +19,14 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/index
+GET http://localhost:3000/products
 Content-Type: application/json
 #works
 
 
 ###
 
-PATCH http://localhost:3000/update/1
+PATCH http://localhost:3000/products/1
 Content-Type: application/json
 
  {
@@ -37,6 +37,6 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/destroy/6
+DELETE http://localhost:3000/products/8
 Content-Type: application/json
 #works
