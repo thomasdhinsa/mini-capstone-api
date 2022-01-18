@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
     name: params[:name],
     price: params[:price],
     image_url: params[:image_url],
-    description: params[:description]
+    ingredients: params[:ingredients],
+    inventory: params[:inventory]
 
     )
     product.save
@@ -29,6 +30,7 @@ class ProductsController < ApplicationController
      product.name = params[:name] || product.name
      product.price = params[:price] || product.price
      product.image_url = params[:image_url] || product.image_url
+     product.inventory = params[:inventory] || product.inventory
      product.save
   #  #product.update(symbol: params[symbol:])(for use in console)
      render json: product 
