@@ -9,19 +9,19 @@ class ProductsController < ApplicationController
 
     )
     product.save
-    render json: product.as_json
+    render json: product
   end 
 
 
   def show
     id = params[:id].to_i
     product = Product.find_by(id: id)
-  render json: product.as_json 
+  render json: product
   end 
      
   def index
     product = Product.all
-    render json: product.as_json 
+    render json: product 
   end 
 
   def update 
@@ -30,8 +30,8 @@ class ProductsController < ApplicationController
      product.price = params[:price] || product.price
      product.image_url = params[:image_url] || product.image_url
      product.save
-   #product.update(symbol: params[symbol:])(for use in console)
-     render json: product.as_json 
+  #  #product.update(symbol: params[symbol:])(for use in console)
+     render json: product 
    end 
 
   def destroy
@@ -39,6 +39,7 @@ class ProductsController < ApplicationController
     product.destroy
     render json: {message: "Product has been deleted"}
   end 
+end 
 
 
-end
+

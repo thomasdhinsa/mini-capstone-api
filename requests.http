@@ -1,12 +1,13 @@
 Get http://localhost:3000/products
 Content-Type: application/json
-#works
+#works #index
 
 
 ###
 
 POST http://localhost:3000/products
 Content-Type: application/json
+#works #create 
 
 {
   "name": "salad",
@@ -19,9 +20,9 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/products
+GET http://localhost:3000/products/1
 Content-Type: application/json
-#works
+#works (product by id) show
 
 
 ###
@@ -33,10 +34,10 @@ Content-Type: application/json
    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Hamburger_%28black_bg%29.jpg"
  }
 
-#works
+#works(update) 
 
 ###
 
 DELETE http://localhost:3000/products/8
 Content-Type: application/json
-#works
+#works #destroy
