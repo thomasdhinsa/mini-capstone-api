@@ -9,8 +9,11 @@ class ProductsController < ApplicationController
     inventory: params[:inventory]
 
     )
-    product.save
+    if product.save
     render json: product
+    else 
+      render json: {errors: products.error.full_messages}, status: 406
+    end
   end 
 
 
@@ -31,9 +34,12 @@ class ProductsController < ApplicationController
      product.price = params[:price] || product.price
      product.image_url = params[:image_url] || product.image_url
      product.inventory = params[:inventory] || product.inventory
-     product.save
-  #  #product.update(symbol: params[symbol:])(for use in console)
-     render json: product 
+     product.ingredients = params[:ingredients] || product.ingredients 
+     if product.save
+      render json: product
+     else 
+      render json: {errors: products.error.full_messages}, status: 406
+     end 
    end 
 
   def destroy
