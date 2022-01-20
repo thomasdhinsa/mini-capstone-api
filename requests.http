@@ -1,4 +1,4 @@
-Get http://localhost:3000/products
+Get http://localhost:3000/products/
 Content-Type: application/json
 #works #index
 
@@ -10,9 +10,9 @@ Content-Type: application/json
 #works #create 
 
 {
-  "name": "salad",
-  "price": "7",
-  "description": "Kale,Cucumber,Spinach,Chick Peas"
+  "name": "Soup",
+  "price": "4",
+  "ingredients": "Ask about soup of the day."
 }
 
 #works
@@ -38,6 +38,6 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/products/8
+DELETE http://localhost:3000/products/2
 Content-Type: application/json
 #works #destroy
