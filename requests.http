@@ -31,7 +31,10 @@ PATCH http://localhost:3000/products/1
 Content-Type: application/json
 
  {
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Hamburger_%28black_bg%29.jpg"
+   "name":"",
+   "ingredients":"",
+   "price"""
+
  }
 
 #works(update) 
@@ -89,14 +92,14 @@ Content-Type: application/json
 
 
 ###
-#begin user authentication
+#begin user creation with password
 POST http://localhost:3000/users
 Content-Type: application/json
 
   {
 
-  "name": "summer",
-  "email": "summer@gmail.com",
+  "name": "Ralph",
+  "email": "Ralph@gmail.com",
   "password": "password",
   "password_confirmation": "password"
 
@@ -110,7 +113,8 @@ Content-Type: application/json
 
   {
 
-    "email": "summer@gmail.com",
+    "email": "Jane@gmail.com",
     "password": "password"
 
   }
+
