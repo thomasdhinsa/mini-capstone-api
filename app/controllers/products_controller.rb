@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+
   def create
     product = Product.new(
 
@@ -10,7 +11,7 @@ class ProductsController < ApplicationController
 
     )
     if product.save
-    render json: product
+      render json: product
     else 
       render json: {errors: products.error.full_messages}, status: 406
     end
@@ -39,8 +40,7 @@ class ProductsController < ApplicationController
       end 
     else products = products.order(:id)
     end 
-    # product = Product.all
-    render json: product 
+    render json: products 
   end 
 
   def update 

@@ -41,3 +41,48 @@ Content-Type: application/json
 DELETE http://localhost:3000/products/2
 Content-Type: application/json
 #works #destroy
+
+
+
+#### Begin supplier requests
+
+#create
+POST http://localhost:3000/suppliers
+Content-Type: application/json
+
+{
+
+  "name": "Pepsi",
+  "email": "Pepsi@pepsico.com",
+  "phone_number": "2346281"
+
+}
+
+
+###
+#show
+GET http://localhost:3000/suppliers/5
+Content-Type: application/json
+
+###
+#index
+GET http://localhost:3000/suppliers/
+Content-Type: application/json
+
+###
+#update 
+PATCH http://localhost:3000/suppliers/
+Content-Type: application/json
+
+{
+
+  "name":"SterlingFoodsInc",
+  "email":"sterlingfoods.inc@gmail.com",
+  "phone_number":"9538899"
+
+}
+
+###
+#delete
+DELETE http://localhost:3000/suppliers/3
+Content-Type: application/json
