@@ -4,6 +4,12 @@ class Product < ApplicationRecord
     validates :ingredients, presence: true, length: { maximum: 150 }
     validates :inventory, presence: true, numericality: true 
     validates :price, numericality: { greater_than: 0 }
+    belongs_to :supplier
+    has_many :orders
+
+  def order
+    Order.find(order_id)
+  end  
 
   def supplier
     Supplier.find(supplier_id)
