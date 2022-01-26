@@ -1,6 +1,9 @@
+@domain = http://localhost:3000
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMzMTAwMDR9.lG52lGIiaMOMMKUqEBvND_Bu2yEGBUagr1LWrxzbn4o
+
 Get http://localhost:3000/products/
 Content-Type: application/json
-#works #index
+#broken #index
 
 
 ###
@@ -106,7 +109,7 @@ Content-Type: application/json
   }
 
 ###
-#begin sessions login
+#begin sessions login#####
 
 POST http://localhost:3000/sessions
 Content-Type: application/json
@@ -123,3 +126,35 @@ Content-Type: application/json
 #index 
 GET http://localhost:3000/users
 Content-Type: application/json
+
+###
+# create order request
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer {{ jwt }}
+
+ {
+   
+   "product_id": ,
+   "quantity": 1,
+   "tax": 0.89,
+   "subtotal": 12,
+   "total": 12.89
+   
+
+
+ }
+
+###
+#show order request
+Get http://localhost:3000/orders/1
+Content-Type: application/json
+Authorization: Bearer {{ jwt }}
+
+###
+#index 
+Get http://localhost:3000/orders
+Authorization: Bearer {{ jwt }}
+
+###
+
