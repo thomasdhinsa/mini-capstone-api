@@ -13,9 +13,11 @@ Content-Type: application/json
 #works #create 
 
 {
-  "name": "Soup",
+  "name": "Grapefruit/Orange",
   "price": "4",
-  "ingredients": "Ask about soup of the day."
+  "ingredients": "Grapefruit, Oranges, and Ginger.",
+  "inventory": 20,
+  "supplier_id": 5
 }
 
 #works

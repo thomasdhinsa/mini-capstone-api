@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_admin, except: [:index, :show]
+  # before_action :authenticate_admin, except: [:index, :show]
   
 
   def create
@@ -8,13 +8,14 @@ class ProductsController < ApplicationController
     name: params[:name],
     price: params[:price],
     ingredients: params[:ingredients],
-    inventory: params[:inventory]
+    inventory: params[:inventory],
+    supplier_id: params[:supplier_id]
 
     )
     if product.save
       render json: product
     else 
-      render json: {errors: products.error.full_messages}, status: 406
+      render json: { errors: product.errors.full_messages }, status: 406
     end
   end 
 
