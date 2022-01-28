@@ -21,11 +21,6 @@ class UsersController < ApplicationController
     render json: users
   end 
 
-  def admin_auth
-    users = User.all
-    if users[:admin] == 1
-      
-  
 end
 
 
